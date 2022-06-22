@@ -1,0 +1,353 @@
+activity_table_layout.xml
+-------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <TableRow android:background="#ECE6B8" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Enroll No" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Mob no" />
+    </TableRow>
+    <TableRow android:background="#E0E7ED" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="1906049" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Ravindra Kadam" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="9022404626" />
+    </TableRow>
+</TableLayout>
+
+
+activity_relative_layout.xml
+----------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Button2" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Button3" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Button4" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn2"
+        android:layout_centerHorizontal="true"
+        android:text="Button5" />
+
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/btn1"
+        android:layout_toRightOf="@+id/btn1"
+        android:text="Button7" />
+</RelativeLayout>
+
+activity_linear_layouts.xml
+---------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter Email Address"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter Password"
+        android:minHeight="48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Login"
+            android:layout_margin="30dp"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Reset"
+            android:layout_margin="30dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+activity_frame_layout.xml
+-------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView android:text="LeftTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="RightTop"
+        android:layout_gravity="top|right" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="CentreTop"
+        android:layout_gravity="top|center_horizontal" />
+    <TextView android:text="Left"
+        android:layout_gravity="left|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Right"
+        android:layout_gravity="right|center_vertical" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Centre"
+        android:layout_gravity="center" />
+    <TextView android:text="LeftBottom"
+        android:layout_gravity="left|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="RightBottom"
+        android:layout_gravity="right|bottom" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="CenterBottom"
+        android:layout_gravity="center|bottom" />
+
+</FrameLayout>
+
+
+Activity_frame_layout.xml
+-------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Frame_Layout2">
+<View
+android:id="@+id/view"
+android:layout_width="250dp"
+android:layout_height="250dp"
+android:background="#93EEFA"/>
+<View
+android:id="@+id/view2"
+android:layout_width="200dp"
+android:layout_height="200dp"
+android:background="#99DFE8" />
+<View
+android:id="@+id/view3"
+android:layout_width="150dp"
+android:layout_height="150dp"
+android:background="#B9EBF1"/>
+<View
+android:id="@+id/view4"
+android:layout_width="100dp"
+android:layout_height="100dp"
+android:background="#B9DBDF"/>
+<View
+android:id="@+id/view5"
+android:layout_width="50dp"
+android:layout_height="50dp"
+android:background="#D6EEF1"/>
+</FrameLayout>
+
+activity_relative_layout.xml
+----------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Relative_Layout">
+<TextView
+android:id="@+id/textView2"
+android:layout_width="370dp"
+android:layout_height="50dp"
+android:layout_marginTop="520dp"
+android:text="long double"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="330dp"
+android:layout_height="50dp"
+android:layout_marginTop="470dp"
+android:layout_marginLeft="20dp"
+android:text="double"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="290dp"
+android:layout_height="50dp"
+android:layout_marginTop="420dp"
+android:layout_marginLeft="40dp"
+android:text="float"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="250dp"
+android:layout_height="50dp"
+android:layout_marginTop="370dp"
+android:layout_marginLeft="60dp"
+android:text="unsigned long int"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="210dp"
+android:layout_height="50dp"
+android:layout_marginTop="320dp"
+android:layout_marginLeft="80dp"
+android:text="long int"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="170dp"
+android:layout_height="50dp"
+android:layout_marginTop="270dp"
+android:layout_marginLeft="100dp"
+android:text="unsigned"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="130dp"
+android:layout_height="50dp"
+android:layout_marginTop="220dp"
+android:layout_marginLeft="120dp"
+android:text="int"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="130dp"
+android:layout_height="50dp"
+android:layout_marginTop="140dp"
+android:layout_marginLeft="30dp"
+android:text="short"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+<TextView
+android:layout_width="130dp"
+android:layout_height="50dp"
+android:layout_marginTop="140dp"
+android:layout_marginLeft="220dp"
+android:text="char"
+android:textStyle="bold"
+android:textSize="20dp"
+android:gravity="center"
+android:background="#E0E7ED"/>
+</RelativeLayout>
+
